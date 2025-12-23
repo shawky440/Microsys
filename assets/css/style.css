@@ -82,9 +82,10 @@ h2, h3, h4 {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  gap: 30px;
-  font-size: 14px;
+  gap: 100px;
+  font-size: 12px;
   color: #0f172a;
+  font-weight: bolder;
 }
 
 /* Navbar */
@@ -117,20 +118,20 @@ h2, h3, h4 {
 }
 
 .nav a:hover {
-  color: #38bdf8;
+  color: #39da4e ;
 }
 
 /* ================= Hero ================= */
 .hero {
-  color: #080742;
+  color: #0f172a;/*#080742;*/
   text-align: center;
-  padding: 100px 20px;
+  padding: 70px 20px;
 }
 
 .hero p {
   max-width: 700px;
   margin: 15px auto 30px;
-  color: #080742;
+  color: #0f172a;
 }
 
 /* ================= Buttons ================= */
@@ -144,21 +145,21 @@ h2, h3, h4 {
 }
 
 .btn.primary {
-  background: #38bdf8;
+  background: #71fa9a;  /*#38bdf8;*/
   color: #000;
 }
 
 .btn.primary:hover {
-  background: #0ea5e9;
+  background: #39da4e;
 }
 
 .btn.secondary {
-  border: 1px solid #38bdf8;
-  color: #38bdf8;
+  border: 1px solid #71fa9a;
+  color: #074211;
 }
 
 .btn.secondary:hover {
-  background: #38bdf8;
+  background: #39da4e;
   color: #000;
 }
 
@@ -212,8 +213,7 @@ h2, h3, h4 {
 
 /* ================= Why Us ================= */
 .why-us {
-  background: #0f172a;
-  color: #fff;
+  /*background: #0f172a;*/
   text-align: center;
 }
 
@@ -229,14 +229,14 @@ h2, h3, h4 {
 
 /* ================= CTA ================= */
 .cta {
-  background: #38bdf8;
+  background: #baffcf;
   text-align: center;
   color: #000;
 }
 
 /* ================= Footer ================= */
 .footer {
-  background: #020617;
+  background: #06080e;
   color: #fff;
   text-align: center;
   padding: 20px;
@@ -263,3 +263,27 @@ h2, h3, h4 {
     font-size: 26px;
   }
 }
+/* ================= Contact Form ================= */
+.contact-form {
+  max-width: 500px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-family: "AlMohanad", sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+/* #71fa9a #074211 #39da4e #baffcf */
