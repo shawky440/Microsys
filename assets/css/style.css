@@ -452,6 +452,7 @@ h2, h3, h4 {
 }
 
 .social-links a {
+    padding: 0px 7px;
     text-decoration: none;
     color: #333;
     font-size: 22px;
