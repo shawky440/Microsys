@@ -21,3 +21,61 @@ window.addEventListener("scroll", () => {
     header.style.boxShadow = "none";
   }
 });
+//Slider in Portfolio
+document.addEventListener("DOMContentLoaded", () => {
+
+  document.querySelectorAll(".clients-slider").forEach(slider => {
+
+    const track = slider.querySelector(".slider-track");
+    const cards = slider.querySelectorAll(".client-card");
+    const nextBtn = slider.querySelector(".slider-btn.next");
+    const prevBtn = slider.querySelector(".slider-btn.prev");
+
+    let index = 0;
+
+    const intervalTime = parseInt(slider.dataset.interval) || 3500;
+
+    function cardWidth() {
+      return cards[0].offsetWidth + 20;
+    }
+
+    function visibleCards() {
+      return Math.floor(slider.offsetWidth / cardWidth());
+    }
+
+    function maxIndex() {
+      return cards.length - visibleCards();
+    }
+
+    function move() {
+      track.style.transform = `translateX(${index * cardWidth()}px)`;
+    }
+
+    nextBtn?.addEventListener("click", () => {
+      if (Math.abs(index) < maxIndex()) {
+        index--;
+        move();
+      }
+    });
+
+    prevBtn?.addEventListener("click", () => {
+      if (index < 0) {
+        index++;
+        move();
+      }
+    });
+
+    /* Auto Slide with custom timing */
+    setInterval(() => {
+      if (Math.abs(index) >= maxIndex()) {
+        index = 0;
+      } else {
+        index--;
+      }
+      move();
+    }, intervalTime);
+
+    window.addEventListener("resize", move);
+  });
+
+});
