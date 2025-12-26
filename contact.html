@@ -6,6 +6,8 @@
   <title>تواصل معنا | Microsys</title>
   <meta name="description" content="تواصل مع شركة Microsys – مدينة نصر أمام قاعة المؤتمرات.">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <!--<link rel="stylesheet" href="assets/css/all.min.css">-->
 </head>
 <body>
 
@@ -52,11 +54,11 @@
     <div class="container">
       <h3 style="text-align:center">أرسل لنا رسالة</h3>
 
-      <form class="contact-form">
-        <input type="text" placeholder="الاسم الكامل" required>
-        <input type="email" placeholder="البريد الإلكتروني" required>
-        <input type="tel" placeholder="رقم الهاتف" required>
-        <textarea rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+      <form class="contact-form" action="https://formspree.io/f/abcdwxyz" method="POST">
+        <input type="text" placeholder="*الاسم الكامل" required>
+        <input type="email" placeholder="البريد الإلكتروني">
+        <input type="tel" placeholder="رقم الهاتف*" required>
+        <textarea rows="5" placeholder="اكتب رسالتك هنا...*" required></textarea>
         <button type="submit" class="btn primary">إرسال الرسالة</button>
       </form>
     </div>
@@ -83,6 +85,15 @@
 <footer class="footer">
   <p>© 2025 Microsys. جميع الحقوق محفوظة.</p>
 </footer>
+
+<a 
+  href="https://wa.me/201001741790?text=مرحبًا،%20أرغب%20في%20الاستفسار%20عن%20خدماتكم" 
+  class="whatsapp-float" 
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
