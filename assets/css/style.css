@@ -14,7 +14,13 @@
   font-style: normal;
   font-display: swap;
 }
-
+@font-face {
+  font-family: "google";
+  src: url("https://fonts.googleapis.com/css2?family=Lobster&display=swap") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 /* ================= Reset ================= */
 * {
   margin: 0;
@@ -82,7 +88,7 @@ h2, h3, h4 {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  gap: 100px;
+  gap: 90px;
   font-size: 12px;
   color: #0f172a;
   font-weight: bolder;
@@ -286,4 +292,156 @@ h2, h3, h4 {
   border-color: #38bdf8;
 }
 
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 55px;
+  height: 55px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  line-height: 55px;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding-top: 5px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+/* ================= Clients Slider ================= */
+
+.clients {
+  background: #ffffff;
+  text-align: center;
+  padding:10px ;
+}
+
+.clients-slider {
+  overflow: hidden;
+  direction: ltr;
+}
+
+.slider-track { 
+  display: flex;
+  transition: transform 0.6s ease;
+  will-change: transform;
+}
+
+/* Card */
+.client-card {
+  min-width: 220px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+}
+
+/* SVG Logo */
+.client-logo {
+  width: 100%;
+  height: 60px;
+}
+
+.client-logo text {
+  font-family: 'google', cursive;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-size: 18px;
+  fill: rgb(37, 37, 37);
+  transition: fill 0.3s ease;
+}
+
+/* Hover */
+.client-card:hover {
+  background: #020617;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.client-card:hover text {
+  fill: #ffffff;
+}
+
+/* Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #020617;
+  color: #fff;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 22px;
+  opacity: 0.85;
+  transition: 0.3s;
+}
+
+.slider-btn:hover {
+  opacity: 1;
+}
+
+.slider-btn.prev {
+  right: 10px; /* RTL */
+}
+
+.slider-btn.next {
+  left: 10px; /* RTL */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .client-card {
+    min-width: 220px;
+  }
+}
+
+
+.testimonials {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.testimonials p.desc {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin: 40px 0 20px;
+    padding-right: 10px;
+}
+
+.card p {
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.card h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.card span {
+    color: #888;
+    font-size: 14px;
+}
 /* #71fa9a #074211 #39da4e #baffcf */
